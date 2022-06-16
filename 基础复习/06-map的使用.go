@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main0601() {
 	var m1 map[int]string //声明map,没有空间，不能直接存储key--value
 	//m1[101] = "张三"
 	if m1 == nil {
@@ -47,4 +47,21 @@ func main() {
 
 	m6[102] = "aaa" //将原map中的key值为102的值替换
 
+}
+func main0602() {
+	m := map[int]string{1: "张三", 2: "李四", 3: "王五"}
+	//遍历map  如果只需要key可以默认忽略不写value
+	for k, v := range m {
+		fmt.Printf("key:%d-->value:%q\n", k, v)
+	}
+}
+func main0603() {
+	//判断map中的key是否存在
+	m := map[int]string{1: "张三", 2: "李四", 3: "王五"}
+
+	if v, ok := m[1]; ok { //m[下标]返回两个值，第一个是value，第二个是bool类型代表key是否存在
+		fmt.Println("value = ", v, " ok = ", ok)
+	} else {
+		fmt.Println("value = ", v, " ok = ", ok)
+	}
 }
