@@ -31,7 +31,7 @@ func main1402() {
 
 	fmt.Println("文件打开成功")
 }
-func main() {
+func main1403() {
 	//以只读，只写，读写 方式打开文件
 	f, err := os.OpenFile("./2.txt", os.O_RDWR, 6)
 	if err != nil {
