@@ -38,5 +38,4 @@ func main10() {
 	fmt.Printf("%p\n", tmp2)
 	fmt.Println("main p2", tmp2)
 	fmt.Println("====================")
-
 }
