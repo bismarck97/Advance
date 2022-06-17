@@ -8,5 +8,7 @@ import (
 func main() {
 	str := "I love my work and I love my family too"
 	s := strings.Split(str, " ")
-	fmt.Println(s)
+	for _, v := range s {
+		fmt.Println(v)
+	}
 }
