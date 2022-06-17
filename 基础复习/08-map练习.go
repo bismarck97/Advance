@@ -17,7 +17,7 @@ import (
 //and : 1
 //提示：使用 strings.Fields() 函数可提高效率。
 
-func main() {
+func main08() {
 	str := "I love my work and I love my family too"
 	s1 := wcFunc(str)
 	for k, v := range s1 {
