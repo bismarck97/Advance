@@ -16,7 +16,7 @@ func NewPerson(name string, age int, flg bool, interest []string) *Person {
 		interest: interest,
 	}
 }
-func main() {
+func main12() {
 	p := NewPerson("张三", 20, true, []string{"篮球", "足球"})
 	println(p.name)
 }
