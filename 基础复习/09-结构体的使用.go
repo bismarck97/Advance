@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"unsafe"
+)
 
 type person struct {
 	name string
@@ -8,7 +11,7 @@ type person struct {
 	age  int
 }
 
-//构造函数
+//有参构造函数
 func newPerson(name, sex string, age int) *person {
 	return &person{
 		name: name,
@@ -16,6 +19,31 @@ func newPerson(name, sex string, age int) *person {
 		sex:  sex,
 	}
 }
+
+//无参构造函数
+func newperson() *person {
+	return &person{}
+}
+
+type student struct {
+	person
+	id    int
+	score []int
+}
+
+//有参构造函数
+func newStudent(name, sex string, id, age int, score []int) *student {
+	return &student{
+		person: person{
+			name: name,
+			sex:  sex,
+			age:  age,
+		},
+		id:    id,
+		score: score,
+	}
+}
+
 func main09() {
 	//利用构造函数创建结构体指针变量
 	p := newPerson("张三", "男", 18)
@@ -52,4 +80,9 @@ func main09() {
 	var tmp person
 	fmt.Println("tmp:", tmp)
 	tmp = p1
+	fmt.Println("======================")
+	fmt.Printf("tmp: %p\n", &tmp)
+	fmt.Printf("tmp.name: %p\n", &tmp.name)
+
+	fmt.Println("true size:", unsafe.Sizeof(true))
 }
