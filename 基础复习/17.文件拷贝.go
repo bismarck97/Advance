@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-func main() {
+func main17() {
 	//打开读文件
 	f1, err := os.OpenFile("test.txt", os.O_RDWR|os.O_CREATE, 0666)
 	if err != nil {
