@@ -27,7 +27,7 @@ func consumer2(in <-chan OrderInfo) {
 		fmt.Println("订单id为：", order.id)
 	}
 }
-func main() {
+func main14() {
 	//定义一个channel
 	ch := make(chan OrderInfo)
 	go producer2(ch) //子go程，传只写channel
