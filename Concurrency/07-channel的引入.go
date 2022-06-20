@@ -25,7 +25,7 @@ func person2() { //person2后执行
 	<-channel
 	printer("world")
 }
-func main() {
+func main07() {
 	go person1()
 	go person2()
 	select {}
