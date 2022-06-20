@@ -11,8 +11,7 @@ func main04() {
 		test()
 		fmt.Println("b")
 	}()
-	for { //不让主go程结束
-	}
+	select {}
 }
 func test() {
 	fmt.Println("c")
