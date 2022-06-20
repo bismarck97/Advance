@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func main() {
+func main10() {
 	ch := make(chan int, 3) //存满三个元素之前，不会阻塞
 	fmt.Println("len = ", len(ch), "cap = ", cap(ch))
 
