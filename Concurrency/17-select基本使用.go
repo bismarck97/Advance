@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-func main17() {
+func main1701() {
 	ch := make(chan int)    //用来进行数据通信的channel
 	quit := make(chan bool) //用来判断是否退出的channel
 	//ch2 := make(chan string)
@@ -32,7 +32,7 @@ func main17() {
 		fmt.Println("==========================")
 	}
 }
-func main() {
+func main1702() {
 	ch := make(chan int, 10)
 	for i := 0; i < 10; i++ {
 		//select每次都是随机选择一个case执行，如果两个都满足，每次执行都可能不一样
