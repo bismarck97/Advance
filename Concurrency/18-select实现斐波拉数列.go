@@ -18,7 +18,7 @@ func Fibonacci(ch <-chan int, quit <-chan bool) {
 	}
 
 }
-func main() {
+func main18() {
 	ch := make(chan int)
 	quit := make(chan bool)
 

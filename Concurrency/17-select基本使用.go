@@ -32,3 +32,16 @@ func main17() {
 		fmt.Println("==========================")
 	}
 }
+func main() {
+	ch := make(chan int, 10)
+	for i := 0; i < 10; i++ {
+		//select每次都是随机选择一个case执行，如果两个都满足，每次执行都可能不一样
+		select {
+		case x := <-ch:
+			fmt.Println(x)
+		case ch <- i:
+		default:
+			fmt.Println("啥都不干")
+		}
+	}
+}
