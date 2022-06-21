@@ -7,11 +7,6 @@ type OrderInfo struct {
 	id int
 }
 
-// NewOrderInfo 构造函数
-func NewOrderInfo(id int) *OrderInfo {
-	return &OrderInfo{id: id}
-}
-
 //生产者
 func producer2(out chan<- OrderInfo) {
 	//生产订单传送
